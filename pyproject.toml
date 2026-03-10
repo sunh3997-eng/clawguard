@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clawguard"
+version = "0.1.0"
+description = "One-command security scanner for OpenClaw instances"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "ClawGuard Contributors" }]
+keywords = ["security", "scanner", "openclaw", "cli", "devtools"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+clawguard = "clawguard.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/openclaw/clawguard"
+Issues = "https://github.com/openclaw/clawguard/issues"
+
+[tool.setuptools.packages.find]
+include = ["clawguard*"]
